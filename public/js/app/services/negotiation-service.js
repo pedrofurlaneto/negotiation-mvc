@@ -5,7 +5,7 @@ class NegotiationService {
     
     listWeekNegotiations() {
         return this._http
-            .get('http://localhost:3000/negociacoes/semana')
+            .get('/negociacoes/semana')
             .then(res => {
                 return res.map(object => new Negotiation(new Date(object.data), object.quantidade, object.valor));
             })
@@ -18,7 +18,7 @@ class NegotiationService {
     
     listLastWeekNegotiations() {
         return this._http
-            .get('http://localhost:3000/negociacoes/anterior')
+            .get('/negociacoes/anterior')
             .then(res => {
                 console.log(res);
                 return res.map(object => new Negotiation(new Date(object.data), object.quantidade, object.valor));
@@ -31,7 +31,7 @@ class NegotiationService {
     
     listTwoWeeksAgoNegotiations() {
         return this._http
-            .get('http://localhost:3000/negociacoes/retrasada')
+            .get('/negociacoes/retrasada')
             .then(res => {
                 console.log(res);
                 return res.map(object => new Negotiation(new Date(object.data), object.quantidade, object.valor));
