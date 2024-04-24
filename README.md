@@ -19,4 +19,6 @@ This study case delves into the intricacies of JavaScript's ECMAScript 2015 (ES6
 ## Security and Design Patterns
 Adhering to the MVC standard, the project also implements design patterns like Proxy and Factory to ensure code security and scalability.
 
+<img src="https://i.ibb.co/PFM1nBf/Screenshot-from-2024-04-24-11-52-58.png" alt="print of front view"/>
+
 :)
