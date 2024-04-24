@@ -1,0 +1,16 @@
+{
+  "name": "negotiation-mvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm -w server start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "workspaces": [
+    "server"
+  ],
+  "license": "ISC"
+}
