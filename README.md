@@ -10,11 +10,8 @@ This study case delves into the intricacies of JavaScript's ECMAScript 2015 (ES6
 - **Template Rendering**: Dynamic user interfaces are rendered, responding to user interactions.
 - **Asynchronous Programming**: Promises are used for handling asynchronous operations, simplifying code complexity.
 
-## Execution Instructions
-1. Clone the repository to your local machine.
-2. Install the necessary dependencies with `npm install`.
-3. To view the front-end, navigate to `client/index.html`.
-4. Start the project with `npm start`. Access the application at `http://localhost:3000`.
+## Try it!!
+You can try it on: [Negotiations-MVC](https://negotiations-mvc.vercel.app/)
 
 ## Security and Design Patterns
 Adhering to the MVC standard, the project also implements design patterns like Proxy and Factory to ensure code security and scalability.
