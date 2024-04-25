@@ -1,4 +1,9 @@
+var express = require('express')
+    ,app = express()
+    ,path = require('path')
+    ,bodyParser = require('body-parser');
 /* Código simplório, apenas para fornecer o serviço para a aplicação */
+
 var api = {}
 
 var dataAtual = new Date();
@@ -55,6 +60,22 @@ api.cadastraNegociacao = function(req, res) {
    res.status(200).json("Negociação recebida");
 };
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });  
 
+app.use(bodyParser.json());
 
-module.exports = api;
+app.get('/negociacoes/semana', api.listaSemana);
+
+app.get('/negociacoes/anterior', api.listaAnterior);
+
+app.get('/negociacoes/retrasada', api.listaRetrasada);  
+
+app.listen(3000, () => {
+    console.log('Servidor estutando na porta: 3000');
+});
+
+module.exports = app;

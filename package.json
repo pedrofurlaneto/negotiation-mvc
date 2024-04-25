@@ -10,7 +10,6 @@
   "keywords": [],
   "author": "",
   "workspaces": [
-    "public",
     "server"
   ],
   "license": "ISC"

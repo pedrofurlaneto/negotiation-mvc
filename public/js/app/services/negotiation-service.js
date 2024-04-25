@@ -5,7 +5,7 @@ class NegotiationService {
     
     listWeekNegotiations() {
         return this._http
-            .get('/negociacoes/semana')
+            .get('https://negotiation-mvc-server.vercel.app/negociacoes/semana')
             .then(res => {
                 return res.map(object => new Negotiation(new Date(object.data), object.quantidade, object.valor));
             })
@@ -18,7 +18,7 @@ class NegotiationService {
     
     listLastWeekNegotiations() {
         return this._http
-            .get('/negociacoes/anterior')
+            .get('https://negotiation-mvc-server.vercel.app/negociacoes/anterior')
             .then(res => {
                 return res.map(object => new Negotiation(new Date(object.data), object.quantidade, object.valor));
             })
@@ -30,7 +30,7 @@ class NegotiationService {
     
     listTwoWeeksAgoNegotiations() {
         return this._http
-            .get('/negociacoes/retrasada')
+            .get('https://negotiation-mvc-server.vercel.app/negociacoes/retrasada')
             .then(res => {
                 return res.map(object => new Negotiation(new Date(object.data), object.quantidade, object.valor));
             })
