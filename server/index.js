@@ -1,14 +1,8 @@
-/* Código simplório, apenas para fornecer o serviço para a aplicação */
-
 var express = require('express')
     ,app = express()
-    ,routes = require('../app/routes')
-    ,path =  require('path')
+    ,routes = require('./app/routes')
     ,bodyParser = require('body-parser');
 
-app.set('clientPath', path.join(__dirname, '../..', 'client'));
-console.log(app.get('clientPath'));
-app.use(express.static(app.get('clientPath')));
 app.use(bodyParser.json());
 
 app.use(function(req, res, next) {
@@ -19,5 +13,9 @@ app.use(function(req, res, next) {
 
 
 routes(app);
+
+app.listen(3000, () => {
+    console.log('Servidor estutando na porta: 3000');
+});
 
 module.exports = app;
