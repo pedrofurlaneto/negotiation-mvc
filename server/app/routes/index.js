@@ -1,6 +1,7 @@
 var api = require('../api');
 
 module.exports  = function(app) {
+    app.route('/', (req, res) => res.send("Ok!"))
     app.route('/negociacoes/semana')
         .get(api.listaSemana);
         

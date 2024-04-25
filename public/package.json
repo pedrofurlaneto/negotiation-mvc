@@ -1,17 +1,13 @@
 {
-  "name": "negotiation-mvc",
+  "name": "public",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm -w server start",
+    "start": "echo ok!",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "workspaces": [
-    "public",
-    "server"
-  ],
   "license": "ISC"
 }

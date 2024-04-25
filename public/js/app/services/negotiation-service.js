@@ -20,7 +20,6 @@ class NegotiationService {
         return this._http
             .get('/negociacoes/anterior')
             .then(res => {
-                console.log(res);
                 return res.map(object => new Negotiation(new Date(object.data), object.quantidade, object.valor));
             })
             .catch(e => {
@@ -33,7 +32,6 @@ class NegotiationService {
         return this._http
             .get('/negociacoes/retrasada')
             .then(res => {
-                console.log(res);
                 return res.map(object => new Negotiation(new Date(object.data), object.quantidade, object.valor));
             })
             .catch(e => {
